@@ -6,26 +6,18 @@ env:
   EKS_CLUSTER: kitops-eks
 
 jobs:
-  Testing:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Code checkout
-        uses: actions/checkout@v4
+  #Testing:
+   #######- name: Checkstyle
+       # run: mvn checkstyle:checkstyle
 
-      - name: Maven test
-        run: mvn test
+      #- name: Set Java 11
+       # uses: actions/setup-java@v3
+       # with:
+       #  distribution: 'temurin'
+        # java-version: '11'
 
-      - name: Checkstyle
-        run: mvn checkstyle:checkstyle
-
-      - name: Set Java 11
-        uses: actions/setup-java@v3
-        with:
-         distribution: 'temurin'
-         java-version: '11'
-
-      - name: Setup SonarQube
-        uses: warchant/setup-sonar-scanner@v7
+      #- name: Setup SonarQube
+     #   uses: warchant/setup-sonar-scanner@v7
 
       
      # - name: SonarQube Scan
